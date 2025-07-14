@@ -19,6 +19,11 @@ const pool = new Pool({
 const notesRoutes = require('./routes/notes');
 app.use('/api/notes', notesRoutes);
 
+//OPENAI AI Routes
+const aiRoutes = require('./routes/ai');
+app.use('/api/ai', aiRoutes);
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
